@@ -1,0 +1,21 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test1": "tsc && node ./dist/index1.js",
+    "test2": "node ./src/index2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@aas-core-works/aas-core3.0rc02-typescript": "file:../aas-core-works-aas-core3.0rc02-typescript-1.0.0-rc.3.tgz"
+  }
+}
