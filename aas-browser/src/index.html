@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ESM Bundled</h2>
+    <span id="esm-bundled" class="content">test</span>
+    <script type="module">
+        import * as aas from "../node_modules/@aas-core-works/aas-core3.0rc02-typescript/dist/bundles/bundle.esm.min.js ";
+        const shell = new aas.types.AssetAdministrationShell("123", new aas.types.AssetInformation(aas.types.AssetKind.Instance));
+        console.log(shell);
+        const content = document.querySelector('#esm-unbundled');
+
+        setTimeout(() => {
+        const content = document.querySelector('#esm-bundled');
+        content.textContent = shell.id;
+      }, 1000);
+        
+    </script>
+</body>
+</html>
